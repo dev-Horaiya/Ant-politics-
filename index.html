@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ant Politics</title>
+<meta name="description" content="Anonymous political discussion for Bangladesh. Small voices, big colony.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Comic+Neue:wght@400;700&family=Hind+Siliguri:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#/">
+      <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
+        <g fill="#1c1917"><circle cx="47" cy="24" r="7"/><ellipse cx="32" cy="32" rx="7" ry="6"/><ellipse cx="14" cy="38" rx="11" ry="8"/></g>
+        <path d="M28 29 L22 18 L16 17 M32 27 L34 14 L40 11 M30 35 L24 46 L18 48 M34 36 L38 48 L44 50 M50 19 L55 10 L61 11 M45 18 L45 8 L51 5" fill="none" stroke="#1c1917" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">Ant Politics</span>
+    </a>
+    <nav class="nav-links" id="nav-right" aria-label="Main"></nav>
+  </div>
+</header>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<div id="app"><div class="wrap page"><p class="muted">Loading the colony...</p></div></div>
+
+<noscript><div class="wrap page"><p>Ant Politics needs JavaScript to run.</p></div></noscript>
+
+<footer class="footer">
+  <div class="wrap">
+    <strong>Ant Politics</strong>
+    <p>Bangladesh only, for now. No NID. No phone. No email.</p>
+    <p>A parody game. It is not affiliated with any party, politician or government, and usernames that imitate real people are not allowed.</p>
+    <p>Anonymous does not mean untraceable. This site is built to collect as little as possible, but nobody can promise perfect secrecy.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

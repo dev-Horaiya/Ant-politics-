@@ -8,8 +8,8 @@
   // 1. PASTE YOUR SUPABASE DETAILS HERE (Supabase > Project Settings > API)
   //    Use the Project URL and the "anon public" key. NEVER paste the service_role key.
   // ===================================================================
-  var SUPABASE_URL = "PASTE_YOUR_PROJECT_URL_HERE";
-  var SUPABASE_ANON_KEY = "PASTE_YOUR_ANON_PUBLIC_KEY_HERE";
+  var SUPABASE_URL = "https://dozfyffvsakrijcddilx.supabase.co/rest/v1/";
+  var SUPABASE_ANON_KEY = "sb_publishable_LNdcHemQM0UF4msNHTBZJQ_h37NckbJ";
   // ===================================================================
 
   var SCOUT_AT = 100;

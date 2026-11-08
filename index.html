@@ -9,29 +9,42 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Comic+Neue:wght@400;700&family=Hind+Siliguri:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Comic+Neue:wght@400;700&family=Hind+Siliguri:wght@500;700&family=Permanent+Marker&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="ant" viewBox="0 0 64 64">
+      <g fill="currentColor"><circle cx="47" cy="24" r="7"/><ellipse cx="32" cy="32" rx="7" ry="6"/><ellipse cx="14" cy="38" rx="11" ry="8"/></g>
+      <circle cx="49.5" cy="22" r="2" fill="#fff"/>
+      <path d="M28 29 L22 18 L16 17 M32 27 L34 14 L40 11 M30 35 L24 46 L18 48 M34 36 L38 48 L44 50 M50 19 L55 10 L61 11 M45 18 L45 8 L51 5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
 <header class="nav">
-  <div class="wrap">
-    <a class="brand" href="#/">
-      <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
-        <g fill="#1c1917"><circle cx="47" cy="24" r="7"/><ellipse cx="32" cy="32" rx="7" ry="6"/><ellipse cx="14" cy="38" rx="11" ry="8"/></g>
-        <path d="M28 29 L22 18 L16 17 M32 27 L34 14 L40 11 M30 35 L24 46 L18 48 M34 36 L38 48 L44 50 M50 19 L55 10 L61 11 M45 18 L45 8 L51 5" fill="none" stroke="#1c1917" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+  <div class="nav-in">
+    <a class="brand" href="#/" aria-label="Ant Politics home">
+      <svg width="38" height="38" aria-hidden="true" style="color:#1c1917"><use href="#ant"/></svg>
       <span class="brand-name">Ant Politics</span>
     </a>
-    <nav class="nav-links" id="nav-right" aria-label="Main"></nav>
+    <form class="searchform" id="searchform" role="search">
+      <input class="search" id="searchbox" type="search" maxlength="60" placeholder="Search trails and ants" aria-label="Search trails and ants" autocomplete="off">
+    </form>
+    <div class="acct" id="acct"></div>
   </div>
 </header>
 
+<div class="app soil">
+  <nav class="rail" id="rail" aria-label="Main menu"><div class="rail-in" id="rail-in"></div></nav>
+  <main class="main" id="view"><div class="narrow"><div class="loader"><div class="row"><svg width="30" height="30"><use href="#ant"/></svg><svg width="30" height="30"><use href="#ant"/></svg><svg width="30" height="30"><use href="#ant"/></svg></div><span>Loading the colony...</span></div></div></main>
+</div>
+
 <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
-<div id="app"><div class="wrap page"><p class="muted">Loading the colony...</p></div></div>
-
-<noscript><div class="wrap page"><p>Ant Politics needs JavaScript to run.</p></div></noscript>
+<noscript><div class="narrow"><p style="color:#fff">Ant Politics needs JavaScript to run.</p></div></noscript>
 
 <footer class="footer">
   <div class="wrap">
@@ -42,7 +55,9 @@
   </div>
 </footer>
 
+<script src="config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="avatar.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
